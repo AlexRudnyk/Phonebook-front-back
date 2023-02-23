@@ -11,7 +11,6 @@ export const AddContact = () => {
   const { data: contacts } = useFetchContactsQuery();
 
   const handleAddContact = async values => {
-    console.log('VALUES: ', values);
     const isExist = contacts.find(
       contact => contact.name.toLowerCase() === values.name.toLowerCase()
     );

@@ -10,7 +10,7 @@ export const ContactItem = ({ contact }) => {
   const [deleteContact, { isLoading }] = useDeleteContactMutation();
 
   const handleDelete = () => {
-    deleteContact(contact.id);
+    deleteContact(contact._id);
     toast.success('Contact deleted');
   };
 
@@ -30,7 +30,7 @@ export const ContactItem = ({ contact }) => {
           </DeleteBtn>
         </div>
         {isModalOpen && (
-          <EditContact id={contact.id} closeModal={setIsModalOpen} />
+          <EditContact id={contact._id} closeModal={setIsModalOpen} />
         )}
       </ListItem>
     </>

@@ -13,7 +13,7 @@ export const EditContact = ({ closeModal, id }) => {
   const [editContact] = useEditContactMutation();
   const handleCloseModal = () => closeModal(false);
 
-  const findContactById = contacts.filter(contact => contact.id === id);
+  const findContactById = contacts.filter(contact => contact._id === id);
 
   const handleEditContact = async fields => {
     try {
@@ -40,7 +40,8 @@ export const EditContact = ({ closeModal, id }) => {
             btnText={'Update'}
             initialValues={{
               name: findContactById[0].name,
-              number: findContactById[0].number,
+              email: findContactById[0].email,
+              phone: findContactById[0].phone,
             }}
           />
         )}
