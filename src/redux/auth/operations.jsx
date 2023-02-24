@@ -2,7 +2,8 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
 
-axios.defaults.baseURL = 'http://localhost:4000/api';
+axios.defaults.baseURL =
+  'https://nodejs-homework-rest-api-sandy.vercel.app/api';
 
 // Utility to add JWT
 
