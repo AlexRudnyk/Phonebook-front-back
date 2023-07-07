@@ -62,6 +62,7 @@ export default function RegistrationView() {
     }
 
     const form = event.currentTarget;
+
     dispatch(
       register({
         name: form.elements.name.value,
